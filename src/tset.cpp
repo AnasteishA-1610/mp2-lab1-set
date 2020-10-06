@@ -125,7 +125,8 @@ istream& operator>>(istream& istr, TSet& s) // ввод
 
 ostream& operator<<(ostream& ostr, const TSet& s) // вывод
 {
-	for (int i = 0; i < s.BitField.GetLength(); i++)
-		ostr << s << ' ';
+	for (int i = 0; i < s.MaxPower; i++)
+		cout << s.BitField.GetBit(i);
+	cout << "}" << endl;
 	return ostr;
 }
